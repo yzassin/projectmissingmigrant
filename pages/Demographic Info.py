@@ -61,7 +61,7 @@ chart = (
         color=alt.Color("Region of Origin:N", title="Region of Origin"),
         y=alt.Y(selected_columns[0], title="Number of Migrants"),  # Using the first selected column initially
 
-        tooltip=["Incident year", "Region of Origin"],
+        tooltip=["Incident year", "Region of Origin", "Number of Migrants"],
     )
 )
 # Display the Altair chart using Streamlit
