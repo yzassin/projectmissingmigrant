@@ -7,8 +7,12 @@ def load_data():
     df = pd.read_csv('migrants.csv')
     return df
 
-st.title('Geographic Information')
-st.subheader('Map of where the incidents occured')
+st.set_page_config(
+        page_title="Geographic",
+        page_icon="📍",
+    )
+
+st.subheader('Map of the incidents occured')
 
 df = load_data()
 # Assume your dataset has a column 'Coordinates' with values like "Lat, Lon"
@@ -33,8 +37,18 @@ map_html = 'map.html'
 mymap.save(map_html)
 
 # Display the HTML file in Streamlit
-st.components.v1.html(open(map_html, 'r').read(), width=1000, height=800, scrolling=True)
+st.components.v1.html(open(map_html, 'r').read(), width=1000, height=500, scrolling=True)
 
-st.divider()
+expander = st.expander("What is this?")
+with expander:
+    st.write(
+        """
+        This map represents the location incident of migrant's missing and death.
+        The number indicates quantitative perspective, revealing the magnitude of missing or deceased migrants in specific regions.
+        Clicking on these numbers, unveils the precise locations which allow for a closer examination of each incident.
+
+        """
+    )
+
 
 
