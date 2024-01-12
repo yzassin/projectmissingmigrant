@@ -2,21 +2,32 @@ import streamlit as st
 
 st.set_page_config(
         page_title="Home",
-        page_icon="📊",
+        page_icon="🌍",
     )
 
-st.title('Global Missing Migrants')
+st.header("*Navigating Humanity*")
 st.image('pic.png', use_column_width=True)
-
-
-st.write("*__Background, overview and motivation:__*")
+st.subheader("The Missing Migrant Project WebApp")
 st.markdown(
         """
-        The global phenomenon of missing migrants is a complex and pressing issue that demands thorough investigation and understanding. Forced or voluntary migration has become a ubiquitous feature of the modern world, fueled by variables like environmental shifts, economic inequality, and violence. Unfortunately, this migratory flow is accompanied by a disturbing trend, the disappearance of migrants during their journey.
-        
-        One major knowledge gap about the difficulties experienced by disadvantaged people in transit is the lack of thorough study on missing migrants. Although media reporting and anecdotal evidence can provide insight into specific situations, a thorough investigation is crucial to fully grasp the complicate factors that contribute to this phenomenon.
+This webapp serves as a comprehensive guide to explore and understand the incidents of missing migrants that have occurred across the globe for several years.
         """
     )
 
+st.markdown('''
+- This webapp serves as a comprehensive guide to explore and understand the incidents of missing migrants that have occurred across the globe for several years.\n
+- The beneficiaries of this webapp include researchers, policymakers, humanitarian organizations, and the general public\n
+- Domain scope: Social services, Migration and Government\n
+''')
+st.divider()
+st.markdown('WQD7003 DATA ANALYTICS Group 2 team:')
+
+st.code("""
+        - Nissa
+        - Fatihah
+        - Yang
+        - Chia Shin
+        - Kai Qi
+""")
 
 
